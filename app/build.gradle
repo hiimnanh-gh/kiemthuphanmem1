@@ -1,0 +1,38 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Thư viện JUnit 5 để viết và chạy test
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // Thư viện hỗ trợ của Google (có sẵn khi init project)
+    implementation 'com.google.guava:guava:32.1.2-jre'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+application {
+    mainClass = 'tester.App' // Đảm bảo package của bạn là 'tester'
+}
+
+tasks.named('test') {
+    useJUnitPlatform() // Lệnh này giúp Gradle hiểu và chạy được JUnit 5
+}
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Test) {
+    systemProperty "file.encoding", "UTF-8"
+}
