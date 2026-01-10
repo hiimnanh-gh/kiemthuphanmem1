@@ -70,7 +70,8 @@ Thực hiện Commit có gắn mã số Issue (#1, #2,...) để liên kết mã
 
 Sử dụng từ khóa closes #index để tự động đóng Issue khi hoàn tất.
 
-![Uploading image.png…]()
+<img width="1904" height="865" alt="image" src="https://github.com/user-attachments/assets/d589c037-7506-45bf-938d-073405ab87e3" />
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
