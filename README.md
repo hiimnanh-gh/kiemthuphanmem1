@@ -14,7 +14,7 @@ Ngày thực hiện: 08/01/2026
 
 Hoạt động: Trải nghiệm chất lượng giao diện với ứng dụng Cantunsee để rèn luyện kỹ năng phân biệt các chi tiết thiết kế UI nhỏ nhất.
 
-Kết quả: Đạt điểm số cao trong thử thách phân biệt các chi tiết thiết kế UI.
+Kết quả: Đạt điểm số cao trong thử thách phân biệt thiết kế.
 
 <img width="1886" height="858" alt="image" src="https://github.com/user-attachments/assets/51364877-8eae-433d-bc7f-53f8ba219008" />
 
@@ -26,7 +26,7 @@ Dự án thực hiện các chức năng phân tích danh sách điểm số c�
 
 Các chức năng chính:
 
-countExcellentStudents: Đếm số lượng học sinh có điểm Giỏi (điểm từ 8.0 trở lên).
+countExcellentStudents: Đếm số lượng học sinh có điểm Giỏi (từ 8.0 trở lên).
 
 calculateValidAverage: Tính trung bình cộng của các đầu điểm hợp lệ (nằm trong khoảng từ 0 đến 10).
 
@@ -48,18 +48,11 @@ Sử dụng công cụ dòng lệnh (Terminal, Git Bash, hoặc PowerShell).
 
 Các lệnh thực hiện:
 
-Di chuyển vào thư mục dự án:
-
 Bash
 cd unit-test
-Build dự án:
-
-Bash
 ./gradlew build
-Chạy Unit Test:
-
-Bash
 ./gradlew test
+
 2.4. Kết quả kiểm thử
 Tất cả các ca kiểm thử (Test Cases) đã được thực hiện thành công 100%.
 
@@ -71,15 +64,38 @@ Trường hợp biên: Danh sách trống, danh sách chỉ chứa giá trị 0 
 
 Trường hợp ngoại lệ: Danh sách chứa toàn bộ điểm sai (điểm âm hoặc điểm > 10).
 
-Lưu ý: Báo cáo chi tiết dưới dạng HTML (HTML Report) có thể xem tại đường dẫn:
+Lưu ý: Báo cáo chi tiết dưới dạng HTML (HTML Report) có tại: unit-test/app/build/reports/tests/test/index.html
 
-unit-test/app/build/reports/tests/test/index.html
+🧪 Tuần 2: Kiểm thử Tự động E2E với Cypress
+1. Giới thiệu bài tập
+Thực hiện kịch bản kiểm thử tự động End-to-End (E2E) trên trang thương mại điện tử mẫu Saucedemo.
 
-3. Quy trình quản lý Issue
-Dự án áp dụng quy trình làm việc chuyên nghiệp trên GitHub:
+2. Các kịch bản kiểm thử đã thực hiện (Specs)
+Dự án triển khai tại thư mục ./cypress-test với các kịch bản chính:
 
-Tạo Issue: Mỗi đầu mục công việc đều được quản lý bằng một Issue riêng biệt.
+Đăng nhập (login_spec.cy.js): Kiểm tra đăng nhập thành công với tài khoản hợp lệ (standard_user) và hiển thị thông báo lỗi khi thông tin không hợp lệ.
 
-Liên kết Commit: Thực hiện Commit kèm theo mã số Issue (ví dụ: #1, #2) để truy vết mã nguồn.
+Giỏ hàng (cart_spec.cy.js):
 
-Tự động hóa: Sử dụng từ khóa closes #index để tự động đóng Issue khi mã nguồn được cập nhật.
+Thêm sản phẩm vào giỏ hàng và xác minh badge hiển thị số lượng sản phẩm.
+
+Sử dụng bộ lọc sắp xếp sản phẩm theo giá (Price low to high).
+
+Xóa sản phẩm: Kiểm tra chức năng nút Remove để xác minh giỏ hàng trở về 0.
+
+Thanh toán (Checkout): Thực hiện đầy đủ luồng điền thông tin khách hàng (John Doe, 12345) và xác minh chuyển hướng thành công đến trang Overview (/checkout-step-two.html).
+
+3. Hướng dẫn chạy kiểm thử
+Yêu cầu: Đã cài đặt Node.js và Cypress trong thư mục cypress-test.
+
+Lệnh thực hiện:
+
+Bash
+cd cypress-test
+npx cypress open
+4. Kết quả kiểm thử
+🛠️ Quy trình quản lý Issue & Commit
+<img width="1918" height="837" alt="image" src="https://github.com/user-attachments/assets/5d7ccdfe-4c55-47a4-93d3-a6c9c2d203f0" />
+<img width="1919" height="845" alt="image" src="https://github.com/user-attachments/assets/21513b0a-8858-42b8-bf4a-addf731f9200" />
+<img width="1919" height="845" alt="image" src="https://github.com/user-attachments/assets/184638b4-f42a-4e4a-9fd3-d25bef9c4137" />
+
