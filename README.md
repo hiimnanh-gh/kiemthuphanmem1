@@ -1,14 +1,38 @@
-# kiemthuphanmem
+# Báo cáo Thực hành Kiểm thử Phần mềm
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Repo này lưu trữ toàn bộ các bài tập thực hành trong học phần Kiểm thử phần mềm.
 
-08/01/26
+## 📝 Thông tin sinh viên
+- **Họ và tên:** [Đào Nguyên Anh]
+- **Mã sinh viên:** [BIT230023]
+- **Lớp:** [23IT-GM]
+
+---
+
+## 🎨 Tuần 1: Trải nghiệm UI & Kiểm thử Đơn vị (JUnit)
+
+### 1. Trải nghiệm Giao diện (UI Experience)
+- **Ngày thực hiện:** 08/01/26
+- **Hoạt động:** Trải nghiệm chất lượng giao diện với Cantunsee.
+- **Kết quả:** Đạt điểm số cao trong thử thách phân biệt các chi tiết thiết kế UI.
 
 <img width="1886" height="858" alt="image" src="https://github.com/user-attachments/assets/51364877-8eae-433d-bc7f-53f8ba219008" />
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-10/01/26
+### 2. Kiểm thử Đơn vị với JUnit 5 (Unit Testing)
+- **Ngày thực hiện:** 10/01/26
+- **Chủ đề:** Phân tích dữ liệu điểm số học sinh.
+- **Thư mục dự án:** `./unit-test`
+- **Nội dung thực hiện:**
+    - Triển khai lớp `StudentAnalyzer` với các phương thức `countExcellentStudents` và `calculateValidAverage`.
+    - Áp dụng kỹ thuật Validation để bỏ qua điểm âm hoặc điểm lớn hơn 10.
+    - Viết Unit Test với JUnit 5 bao gồm các trường hợp: bình thường, biên và ngoại lệ.
+- **Cách chạy kiểm thử:**
+- **Cách chạy kiểm thử:**
+  ```bash
+  cd unit-test
+  ./gradlew test
 
 Student Grade Analyzer - Kiểm thử Unit Test với JUnit 5
 
@@ -70,7 +94,7 @@ Thực hiện Commit có gắn mã số Issue (#1, #2,...) để liên kết mã
 
 Sử dụng từ khóa closes #index để tự động đóng Issue khi hoàn tất.
 
-
-
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
