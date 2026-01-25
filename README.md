@@ -104,7 +104,7 @@ E:/nguyenanh/tools/jmeter/apache-jmeter-5.6.3/bin/jmeter.bat
 
 - Bảng Summary Report (thay link bằng ảnh thực tế của bạn):
 
-<img width="1920" height="1080" alt="JMeter Summary Report" src="./jmeter/results/summary_report.png" />
+<img width="1920" height="1080" alt="JMeter Summary Report" src="./jmeter/results/imgage.png" />
 
 - Chỉ số chính:
   - Response Time (ms): Thời gian phản hồi trung bình.
