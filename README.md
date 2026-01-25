@@ -8,7 +8,7 @@ Repo lưu trữ bài tập thực hành trong học phần Kiểm thử phần m
 - Mã sinh viên: BIT230023
 - Lớp: 23IT-GM
 
-## 🎨 Tuần 1: Trải nghiệm UI & Kiểm thử Đơn vị (JUnit)
+## 🎨 Trải nghiệm UI & Kiểm thử Đơn vị (JUnit)
 
 ### 1. Trải nghiệm Giao diện (UI Experience)
 
@@ -49,7 +49,7 @@ cd unit-test
 - Trường hợp kiểm thử: danh sách thường (trộn hợp lệ/không hợp lệ), biên (trống/0/10), ngoại lệ (toàn bộ điểm lỗi).
 - Báo cáo HTML: `unit-test/app/build/reports/tests/test/index.html`.
 
-## 🧪 Tuần 2: Kiểm thử Tự động E2E với Cypress
+## 🧪 Kiểm thử Tự động E2E với Cypress
 
 **Giới thiệu**
 
@@ -71,3 +71,46 @@ npx cypress open
 <img width="1918" height="837" alt="issue-board" src="https://github.com/user-attachments/assets/5d7ccdfe-4c55-47a4-93d3-a6c9c2d203f0" />
 <img width="1919" height="845" alt="commit-history-1" src="https://github.com/user-attachments/assets/21513b0a-8858-42b8-bf4a-addf731f9200" />
 <img width="1919" height="845" alt="commit-history-2" src="https://github.com/user-attachments/assets/184638b4-f42a-4e4a-9fd3-d25bef9c4137" />
+
+## 🚀 Kiểm thử Hiệu năng với JMeter
+
+**Giới thiệu**
+
+- Mục tiêu: Đánh giá khả năng chịu tải và thời gian phản hồi của hệ thống bằng Apache JMeter 5.6.3.
+- Trang web kiểm thử: [liên kết đáng ngờ đã bị xóa].
+
+**Cấu trúc thư mục** (trong `./jmeter`)
+
+- `scripts/`: Tệp kịch bản kiểm thử (`performance_test.jmx`).
+- `results/`: Hình ảnh và tệp kết quả kiểm thử.
+
+**Kịch bản kiểm thử (Thread Groups)**
+
+- Cơ bản: 10 users, 5 vòng lặp (Loop Count), truy cập trang chủ (GET /).
+- Tải nặng: 50 users, ramp-up 30 giây, truy cập chuyên mục (GET /kinh-doanh).
+- Tùy chỉnh: 20 users, chạy liên tục 60 giây, truy cập trang chủ (GET /).
+
+**Cách chạy**
+
+```bash
+E:/nguyenanh/tools/jmeter/apache-jmeter-5.6.3/bin/jmeter.bat
+# Mở file: jmeter/scripts/performance_test.jmx
+```
+
+- Nhấn Start (mũi tên xanh) để chạy kịch bản.
+- Xem kết quả tại các Listener: Summary Report, View Results Tree.
+
+**Kết quả kiểm thử**
+
+- Bảng Summary Report (thay link bằng ảnh thực tế của bạn):
+
+<img width="1920" height="1080" alt="JMeter Summary Report" src="./jmeter/results/summary_report.png" />
+
+- Chỉ số chính:
+  - Response Time (ms): Thời gian phản hồi trung bình.
+  - Throughput: Số yêu cầu xử lý mỗi giây.
+  - Error %: Tỷ lệ lỗi (đang 0.00% cho kịch bản cơ bản).
+
+**Quy trình quản lý tiến độ**
+
+- Tuân thủ quy trình GitHub: tạo Issue (#7, #8, #9), liên kết commit (vd: closes #8), tự động đóng khi hoàn tất kịch bản.
